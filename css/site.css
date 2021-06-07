@@ -1,17 +1,16 @@
-*{
+/*Padding = espaço exterior, margin = espaço interior*/
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-decoration: none;
     font-family: 'Quicksand', sans-serif;
+    text-decoration: none;
 }
 
-/*padiding = espaço exterior , ,margin = espaço interior*/
-body{
-    overflow-x: hidden;
-}
+body {}
 
-.header{
+.header {
     display: flex;
     background-color: black;
     height: 75px;
@@ -21,62 +20,184 @@ body{
     width: 100%;
 }
 
-.header ul{
+.header ul {
     list-style: none;
     display: flex;
+    align-items: center;
+}
 
+.header ul li {
+    padding: 0 10px;
 }
-.header ul li{
-     padding: 0 10px;
-    
-    
-}
-.header ul li a{
+
+.header ul li a {
     color: white;
-    transition: 0,5s;
+    transition: 0.5s;
     font-size: 16px;
     letter-spacing: 2px;
 }
 
-.header ul li a:hover{
-  color: #fdb5cb;
-  transition: 0,5s;
-
+.header ul li a:hover {
+    color: #fdb5cb;
+    transition: 0.5s;
+    text-decoration: none;
 }
 
-
-
-.title{
+.title {
     color: white;
-    font-size: 18px;
+    font-size: 20px;
     letter-spacing: 2px;
 }
-.sub{
+
+.sub {
     color: #fdb5cb;
 }
 
-.itens{
+.itens {
     display: flex;
     justify-content: space-between;
     width: 80%;
     margin: 0 auto;
-    
 }
 
 .fundo {
     position: relative;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     background: url(../img/maxresdefault.png) center center no-repeat fixed;
     background-size: cover;
 }
 
-  .fundo::before {
+.fundo::before {
     content: "";
-    background: rgba(0, 0, 0, 0.651);
+    background: rgba(0, 0, 0, 0.548);
     position: absolute;
     bottom: 0;
     top: 0;
     left: 0;
     right: 0;
+}
+
+.textos {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textosBlock {
+    z-index: 2;
+    text-align: center;
+}
+
+.texto1 {
+    color: #fdb5cb;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.texto2 {
+    color: white;
+    font-size: 24px;
+}
+
+.sobre {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    justify-content: flex-end;
+    margin: 0;
+    background-color: #fce8ee;
+}
+
+.caixaSobre {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.tituloSobre {
+    font-size: 32px;
+    font-weight: 600;
+    color: #fc779f;
+    margin-left: 5px;
+}
+
+.CorpoTextoSobre {
+    max-width: 50ch;
+    margin-left: 5px;
+    padding-bottom: 50px;
+}
+
+.imagem {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.imagem img {
+    width: 450px;
+}
+
+.galeria {
+    text-align: center;
+}
+
+.tituloGaleria {
+    font-size: 32px;
+    font-weight: 600;
+    color: #fc779f;
+    padding: 100px 0;
+}
+
+.carouselGaleria {
+    margin: 0 auto;
+    padding: 0 0 100px 0;
+}
+
+.imagemGaleria {}
+
+.imageOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Quicksand', sans-serif;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+.imageOverlayBlur {
+    backdrop-filter: blur(5px);
+}
+
+.imageOverlay>* {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+}
+
+.imageOverlay:hover {
+    opacity: 1;
+}
+
+.imageOverlay:hover>* {
+    transform: translateY(0)
+}
+
+.imageTitle {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.imageDescription {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.25em;
 }
