@@ -201,3 +201,39 @@ body {}
     font-family: 'Quicksand', sans-serif;
     font-size: 1.25em;
 }
+
+.TextoSobreoSite {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.BotaoVoltar{
+    outline: none;
+    border: 0;
+    background-color: #fc779f;
+    padding: 0;
+    border-radius: 5px;
+}
+.BotaoVoltar:hover{
+
+    background-color: transparent;
+    transition: 0,5s;
+    color: #fc779f;
+}
+
+.fundoSobre{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(../img/fundosobre.png) center center no-repeat fixed;
+    background-size: cover;
+}
+
+.seta img{
+    width: 20px;
+    height: 20px;
+
+}
