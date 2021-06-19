@@ -108,6 +108,8 @@ body {}
     justify-content: flex-end;
     margin: 0;
     background-color: #fce8ee;
+    padding-top: 75px;
+    
 }
 
 .caixaSobre {
@@ -118,7 +120,7 @@ body {}
 }
 
 .tituloSobre {
-    font-size: 32px;
+    font-size: 50px;
     font-weight: 600;
     color: #fc779f;
     margin-left: 5px;
@@ -126,6 +128,7 @@ body {}
 
 .CorpoTextoSobre {
     max-width: 50ch;
+    size: 35px;
     margin-left: 5px;
     padding-bottom: 50px;
 }
@@ -207,24 +210,26 @@ body {}
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
+    height: 500px;
+    max-width: 50ch;
+    padding: 50px;
 }
 
-.BotaoVoltar{
+.BotaoVoltar {
     outline: none;
     border: 0;
     background-color: #fc779f;
     padding: 0;
     border-radius: 5px;
 }
-.BotaoVoltar:hover{
 
+.BotaoVoltar:hover {
     background-color: transparent;
-    transition: 0,5s;
+    transition: 0, 5s;
     color: #fc779f;
 }
 
-.fundoSobre{
+.fundoSobre1 {
     position: relative;
     width: 100%;
     height: 100vh;
@@ -232,8 +237,62 @@ body {}
     background-size: cover;
 }
 
-.seta img{
-    width: 20px;
-    height: 20px;
+.header {
+    display: flex;
+    background-color: black;
+    height: 75px;
+    align-items: center;
+    
+    z-index: 3;
+    width: 100%;
+    
+}
 
+.header ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.header ul li {
+    padding: 0 10px;
+}
+
+.header ul li a {
+    color: white;
+    transition: 0.5s;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+.header ul li a:hover {
+    color: #fdb5cb;
+    transition: 0.5s;
+    text-decoration: none;
+}
+
+.title1 {
+    color: white;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.sub1 {
+    color: #fdb5cb;
+}
+
+.itens1 {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.seta  {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    left: 49%;
+    justify-content: center;
+    position: relative;
 }
